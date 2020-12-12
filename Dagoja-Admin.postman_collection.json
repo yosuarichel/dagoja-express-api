@@ -1,0 +1,2744 @@
+{
+	"info": {
+		"_postman_id": "c8d0eed4-afc7-4c77-8e3c-3c4d8e43f60e",
+		"name": "Dagoja-Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get Admin By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "3511273469f7c9755e9061084ca1438742496619788270c3799ade5bd2288603",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/admin/3?lang=id",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"admin",
+								"3"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "3511273469f7c9755e9061084ca1438742496619788270c3799ade5bd2288603",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin/1?lang=id",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-QEqbknsdV4MoXXpgPe2wJFGa834\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:26:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"deleted_at\": null,\n        \"created_at\": \"2020-12-07T12:24:11+07:00\",\n        \"updated_at\": \"2020-12-07T12:24:11+07:00\",\n        \"admin_id\": \"1\",\n        \"admin_role_id\": 1,\n        \"full_name\": \"Richel\",\n        \"email\": \"richel@gmail.com\",\n        \"password\": \"96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e\",\n        \"profile_image_name\": null,\n        \"profile_image_source\": null,\n        \"status\": \"active\"\n    }\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "3511273469f7c9755e9061084ca1438742496619788270c3799ade5bd2288603",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin/3?lang=id",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin",
+										"3"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-cAYHx/Woirxitx6GHqZqlZwkp9E\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:27:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"AD001\",\n    \"message\": \"ADMIN_NOT_FOUND\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show All Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6IjU2MWYyYWJiZWY2ZDU0NWUwNzRlNTExY2I4YjEzMWU5MDI1OGQ0NDI2ZmI0YmRjZWY5NGFlMTZmMjdkMzJlNjAiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDYtMjZUMTI6NDM6MjMrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTMxNDMwMDMsImV4cCI6MTU5MzE1MDIwM30.4Q_GAFSbjfz2fVF6xjniEX9kIjbgzA6YGvoCLFCn5as",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "8b52e88f31c0bcbceb4e6d511263ccc0e54eaf168ed4afd376cf2497b05d04b4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/admin?lang=id&order_by=admin_id&order_type=desc&pagination=false&row=1&page=1",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								},
+								{
+									"key": "order_by",
+									"value": "admin_id",
+									"description": "optional"
+								},
+								{
+									"key": "order_type",
+									"value": "desc",
+									"description": "optional"
+								},
+								{
+									"key": "pagination",
+									"value": "false",
+									"description": "optional"
+								},
+								{
+									"key": "row",
+									"value": "1",
+									"description": "optional"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "8b52e88f31c0bcbceb4e6d511263ccc0e54eaf168ed4afd376cf2497b05d04b4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin?lang=id&order_by=admin_id&order_type=desc&pagination=false&row=1&page=1",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										},
+										{
+											"key": "order_by",
+											"value": "admin_id",
+											"description": "optional"
+										},
+										{
+											"key": "order_type",
+											"value": "desc",
+											"description": "optional"
+										},
+										{
+											"key": "pagination",
+											"value": "false",
+											"description": "optional"
+										},
+										{
+											"key": "row",
+											"value": "1",
+											"description": "optional"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "712"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c8-FJ/hBI31gN3QD3c0Eu0b0OrbYtQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:27:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"count\": 2,\n        \"rows\": [\n            {\n                \"deleted_at\": null,\n                \"created_at\": \"2020-12-07T13:53:40+07:00\",\n                \"updated_at\": \"2020-12-07T13:53:40+07:00\",\n                \"admin_id\": \"2\",\n                \"admin_role_id\": 1,\n                \"full_name\": \"Richel\",\n                \"email\": \"richel@gmail.com\",\n                \"password\": \"96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e\",\n                \"profile_image_name\": null,\n                \"profile_image_source\": null,\n                \"status\": \"active\"\n            },\n            {\n                \"deleted_at\": null,\n                \"created_at\": \"2020-12-07T12:24:11+07:00\",\n                \"updated_at\": \"2020-12-07T12:24:11+07:00\",\n                \"admin_id\": \"1\",\n                \"admin_role_id\": 1,\n                \"full_name\": \"Richel\",\n                \"email\": \"richel@gmail.com\",\n                \"password\": \"96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e\",\n                \"profile_image_name\": null,\n                \"profile_image_source\": null,\n                \"status\": \"active\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "session",
+								"value": "67b5090d2fe887a2c36ca022afc49aed2e773c1b7a7d3d520e4f688ac480a13b",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "admin_role_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "Richel",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "richelyosua@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/admin?lang=en",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "en",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "session",
+										"value": "67b5090d2fe887a2c36ca022afc49aed2e773c1b7a7d3d520e4f688ac480a13b",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "admin_role_id",
+											"value": "1",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "full_name",
+											"value": "Richel",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "richelyosua@gmail.com",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "profile_image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin?lang=en",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cd-phc70/vpLfcN1FTm2QAInli4hy4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:29:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"admin_role_id\": [\n        \"Required\",\n        \"Must Be Integer\"\n    ],\n    \"full_name\": [\n        \"Required\",\n        \"Must Be String\"\n    ],\n    \"email\": [\n        \"Required\",\n        \"Must Be Email\"\n    ],\n    \"password\": [\n        \"Required\",\n        \"Must Be String\"\n    ],\n    \"status\": [\n        \"Required\",\n        \"Must Be Enum\"\n    ]\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "session",
+										"value": "67b5090d2fe887a2c36ca022afc49aed2e773c1b7a7d3d520e4f688ac480a13b",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "admin_role_id",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "full_name",
+											"value": "Richel",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "richelyosua@gmail.com",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin?lang=en",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "363"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16b-WqDnEA4Tpr2OprOt0rhMiPcBf+4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:28:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"deleted_at\": null,\n        \"created_at\": \"2020-12-07T18:28:31+07:00\",\n        \"updated_at\": \"2020-12-07T18:28:31+07:00\",\n        \"admin_id\": \"3\",\n        \"admin_role_id\": 1,\n        \"full_name\": \"Richel\",\n        \"email\": \"richelyosua@gmail.com\",\n        \"password\": \"96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e\",\n        \"status\": \"active\",\n        \"profile_image_name\": null,\n        \"profile_image_source\": null\n    }\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "session",
+										"value": "67b5090d2fe887a2c36ca022afc49aed2e773c1b7a7d3d520e4f688ac480a13b",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "admin_role_id",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "full_name",
+											"value": "Richel",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "richelyosua@gmail.com",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin?lang=en",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-I/cfDU3OI7Ykul4zTqoftuid7VA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:28:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"AD002\",\n    \"message\": \"Admin already registered\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "session",
+								"value": "1d7b3b1d21c7ad97ef99f632c761bdefbe9df3dc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "admin_role_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "Richel",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "richelyosua@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/admin/8?lang=id",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"admin",
+								"8"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "session",
+										"value": "1d7b3b1d21c7ad97ef99f632c761bdefbe9df3dc",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "admin_role_id",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "full_name",
+											"value": "Richel",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "richelyosua@gmail.com",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin/1?lang=id",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:30:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": \"OK\"\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "session",
+										"value": "1d7b3b1d21c7ad97ef99f632c761bdefbe9df3dc",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "admin_role_id",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "full_name",
+											"value": "Richel",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "richelyosua@gmail.com",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dagoja}}/api/v1.0/admin/admin/8?lang=id",
+									"host": [
+										"{{dagoja}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"admin",
+										"admin",
+										"8"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-cAYHx/Woirxitx6GHqZqlZwkp9E\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Dec 2020 11:30:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"AD001\",\n    \"message\": \"ADMIN_NOT_FOUND\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "1d7b3b1d21c7ad97ef99f632c761bdefbe9df3dc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/admin/1?lang=id",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"admin",
+								"1"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Maintenance",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance/1?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:33:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": \"OK\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Setting",
+			"item": [
+				{
+					"name": "Get Setting By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"type": "text",
+								"value": "3511273469f7c9755e9061084ca1438742496619788270c3799ade5bd2288603",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/setting/1?lang=id",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"setting",
+								"1"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Maintenance By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance/2?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance",
+										"2"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-YcgC1Oq5KGipetEEHe9TEUjLbdI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:05:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"MT001\",\n    \"message\": \"MAINTENANCE_NOT_FOUND\"\n}"
+						},
+						{
+							"name": "Get Maintenance By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance/1?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-vo5dZMttU/IkuGQnUGmkA6IhyFU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:07:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"maintenance_id\": \"1\",\n        \"sandbox\": false,\n        \"production\": false,\n        \"deleted_at\": null,\n        \"created_at\": \"2020-02-05T14:03:11.138Z\",\n        \"updated_at\": \"2020-02-05T14:03:11.138Z\"\n    }\n}"
+						},
+						{
+							"name": "Get Maintenance By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance/1?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-vo5dZMttU/IkuGQnUGmkA6IhyFU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:07:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"maintenance_id\": \"1\",\n        \"sandbox\": false,\n        \"production\": false,\n        \"deleted_at\": null,\n        \"created_at\": \"2020-02-05T14:03:11.138Z\",\n        \"updated_at\": \"2020-02-05T14:03:11.138Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show All Setting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6IjU2MWYyYWJiZWY2ZDU0NWUwNzRlNTExY2I4YjEzMWU5MDI1OGQ0NDI2ZmI0YmRjZWY5NGFlMTZmMjdkMzJlNjAiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDYtMjZUMTI6NDM6MjMrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTMxNDMwMDMsImV4cCI6MTU5MzE1MDIwM30.4Q_GAFSbjfz2fVF6xjniEX9kIjbgzA6YGvoCLFCn5as",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "8b52e88f31c0bcbceb4e6d511263ccc0e54eaf168ed4afd376cf2497b05d04b4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/setting?lang=id&order_by=setting_id&order_type=desc&pagination=false&row=1&page=1",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"setting"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								},
+								{
+									"key": "order_by",
+									"value": "setting_id",
+									"description": "optional"
+								},
+								{
+									"key": "order_type",
+									"value": "desc",
+									"description": "optional"
+								},
+								{
+									"key": "pagination",
+									"value": "false",
+									"description": "optional"
+								},
+								{
+									"key": "row",
+									"value": "1",
+									"description": "optional"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show All Maintenance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance?lang=id&order_by=maintenance_id&order_type=desc&pagination=false&row=1&page=1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										},
+										{
+											"key": "order_by",
+											"value": "maintenance_id",
+											"description": "optional"
+										},
+										{
+											"key": "order_type",
+											"value": "desc",
+											"description": "optional"
+										},
+										{
+											"key": "pagination",
+											"value": "false",
+											"description": "optional"
+										},
+										{
+											"key": "row",
+											"value": "1",
+											"description": "optional"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-muKDyIpn5MZSTKDD/5xvSWid9xI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:07:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"count\": 1,\n        \"rows\": [\n            {\n                \"maintenance_id\": \"1\",\n                \"sandbox\": false,\n                \"production\": false,\n                \"deleted_at\": null,\n                \"created_at\": \"2020-02-05T14:03:11.138Z\",\n                \"updated_at\": \"2020-02-05T14:03:11.138Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Setting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "session",
+								"value": "67b5090d2fe887a2c36ca022afc49aed2e773c1b7a7d3d520e4f688ac480a13b",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "about",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "privacy_policy",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "terms_and_condition",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "supplier_session_expiry",
+									"value": "3;h",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "dropshipper_session_expiry",
+									"value": "1;y",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "admin_session_expiry",
+									"value": "3;y",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_version_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_version_update_message",
+									"value": "update now",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_is_maintenance",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_maintenance_message",
+									"value": "under maintenance",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_version_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_version_update_message",
+									"value": "update now",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_is_maintenance",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_maintenance_message",
+									"value": "under maintenance",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/setting?lang=en",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"setting"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "en",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create New Maintenance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "sandbox",
+											"value": "0",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "production",
+											"value": "0",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-Pz2lIRdt4VDYq3nrPpVqTnr+kZA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:03:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": {\n        \"maintenance_id\": \"1\",\n        \"sandbox\": false,\n        \"production\": false,\n        \"updated_at\": \"2020-02-05T14:03:11.138Z\",\n        \"created_at\": \"2020-02-05T14:03:11.138Z\",\n        \"deleted_at\": null\n    }\n}"
+						},
+						{
+							"name": "Create New Maintenance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "sandbox",
+											"value": "asd",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "production",
+											"value": "asd",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "X-HTTP-Method-Override, Accept-Encoding"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-vbDQQC65hvz8BghMbgi8OVkL0Ns\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:06:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 422,\n    \"result\": [\n        \"SANDBOX_MUST_BE_BOOLEAN\",\n        \"PRODUCTION_MUST_BE_BOOLEAN\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Setting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "session",
+								"value": "1d7b3b1d21c7ad97ef99f632c761bdefbe9df3dc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "about",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "privacy_policy",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "terms_and_condition",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "supplier_session_expiry",
+									"value": "3;h",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "dropshipper_session_expiry",
+									"value": "1;y",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "admin_session_expiry",
+									"value": "3;y",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_version_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_version_update_message",
+									"value": "update now",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_is_maintenance",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "android_maintenance_message",
+									"value": "under maintenance",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_version_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_version_update_message",
+									"value": "update now",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_is_maintenance",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "ios_maintenance_message",
+									"value": "under maintenance",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/setting/1?lang=id",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"setting",
+								"1"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Maintenance",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "sandbox",
+											"value": "0",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "production",
+											"value": "0",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance/1?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:32:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": \"OK\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Setting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWRtaW4iLCJuYW1lIjoiTGluaXBheSIsImVtYWlsIjoiaW5mb0BsaW5pcGF5LmlkIiwic2Vzc2lvbiI6Ijk0YWRmNjYxZGZiZjk1MGU5NTAwN2RkZTA0ZTU4MDBhMTgyNzc4ZGNlMDFlNmY5YTA2OGVlZDM2YzdjNmM3MDQiLCJzZXNzaW9uX2V4cGlyeSI6IjIwMjAtMDUtMjhUMTI6MTE6MDYrMDc6MDAiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE1OTA2MzU0NjYsImV4cCI6MTU5MDY0MjY2Nn0.egv1U5URrszRW2cLO3OB5oBCnOomYJnF2LEaYlha9Z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "1d7b3b1d21c7ad97ef99f632c761bdefbe9df3dc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{dagoja}}/api/v1.0/admin/setting/1?lang=id",
+							"host": [
+								"{{dagoja}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"admin",
+								"setting",
+								"1"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "id",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Maintenance",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1.0/maintenance/1?lang=id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"maintenance",
+										"1"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "id",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Language",
+									"value": "id"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2020 14:33:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": 200,\n    \"result\": \"OK\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

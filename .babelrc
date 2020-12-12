@@ -1,0 +1,17 @@
+// {
+//     "presets": ["@babel/preset-env"],
+//     "ignore": [
+//         "build/yarn/**/*.js",
+//         "build/nodejs/**/*.js"
+//     ]
+// }
+{
+    "presets": ["@babel/preset-env"],
+    "ignore": [
+        "build/yarn/**/*.js",
+        "build/nodejs/**/*.js"
+    ],
+    "plugins": [
+        ["@babel/transform-runtime"]
+    ]
+}

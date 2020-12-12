@@ -1,0 +1,2069 @@
+openapi: 3.0.0
+info:
+  title: Dagoja-Admin
+  contact: {}
+  version: '1.0'
+servers:
+- url: http://example.com/api/v1.0/admin
+  variables: {}
+paths:
+  /admin/3:
+    get:
+      tags:
+      - Admin
+      summary: Get Admin By Id
+      operationId: GetAdminById
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 358
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"166-QEqbknsdV4MoXXpgPe2wJFGa834"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Mon, 07 Dec 2020 11:26:40 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/200OK'
+              example:
+                response: 200
+                result:
+                  deleted_at: 
+                  created_at: 2020-12-07T05:24:11+00:00
+                  updated_at: 2020-12-07T05:24:11+00:00
+                  admin_id: 1
+                  admin_role_id: 1
+                  full_name: Richel
+                  email: richel@gmail.com
+                  password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+                  profile_image_name: 
+                  profile_image_source: 
+                  status: active
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMaintenanceById'
+              example:
+                code: AD001
+                message: ADMIN_NOT_FOUND
+      deprecated: false
+  /admin:
+    get:
+      tags:
+      - Admin
+      summary: Show All Admin
+      operationId: ShowAllAdmin
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      - name: order_by
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: admin_id
+      - name: order_type
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: desc
+      - name: pagination
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: boolean
+          example: false
+      - name: row
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+          example: 1
+      - name: page
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+          example: 1
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 712
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"2c8-FJ/hBI31gN3QD3c0Eu0b0OrbYtQ"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Mon, 07 Dec 2020 11:27:36 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/200OK1'
+              example:
+                response: 200
+                result:
+                  count: 2
+                  rows:
+                  - deleted_at: 
+                    created_at: 2020-12-07T06:53:40+00:00
+                    updated_at: 2020-12-07T06:53:40+00:00
+                    admin_id: 2
+                    admin_role_id: 1
+                    full_name: Richel
+                    email: richel@gmail.com
+                    password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+                    profile_image_name: 
+                    profile_image_source: 
+                    status: active
+                  - deleted_at: 
+                    created_at: 2020-12-07T05:24:11+00:00
+                    updated_at: 2020-12-07T05:24:11+00:00
+                    admin_id: 1
+                    admin_role_id: 1
+                    full_name: Richel
+                    email: richel@gmail.com
+                    password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+                    profile_image_name: 
+                    profile_image_source: 
+                    status: active
+      deprecated: false
+    post:
+      tags:
+      - Admin
+      summary: Create New Admin
+      operationId: CreateNewAdmin
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: en
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/x-www-form-urlencoded
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+              - admin_role_id
+              - full_name
+              - email
+              - password
+              - status
+              type: object
+              properties:
+                admin_role_id:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                full_name:
+                  type: string
+                  description: required
+                  example: Richel
+                email:
+                  type: string
+                  description: required
+                  example: richelyosua@gmail.com
+                password:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 123123
+                status:
+                  type: string
+                  description: required
+                  example: active
+        required: false
+      responses:
+        200:
+          description: ''
+          headers:
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: X-HTTP-Method-Override, Accept-Encoding
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: en
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 363
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"16b-WqDnEA4Tpr2OprOt0rhMiPcBf+4"
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Mon, 07 Dec 2020 11:28:31 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/200OK'
+              example:
+                response: 200
+                result:
+                  deleted_at: 
+                  created_at: 2020-12-07T11:28:31+00:00
+                  updated_at: 2020-12-07T11:28:31+00:00
+                  admin_id: 3
+                  admin_role_id: 1
+                  full_name: Richel
+                  email: richelyosua@gmail.com
+                  password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+                  status: active
+                  profile_image_name: 
+                  profile_image_source: 
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMaintenanceById'
+              example:
+                code: AD002
+                message: Admin already registered
+        422:
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/422UnprocessableEntity'
+              example:
+                admin_role_id:
+                - Required
+                - Must Be Integer
+                full_name:
+                - Required
+                - Must Be String
+                email:
+                - Required
+                - Must Be Email
+                password:
+                - Required
+                - Must Be String
+                status:
+                - Required
+                - Must Be Enum
+      deprecated: false
+  /admin/8:
+    put:
+      tags:
+      - Admin
+      summary: Update Admin
+      operationId: UpdateAdmin
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/x-www-form-urlencoded
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+              - admin_role_id
+              - full_name
+              - email
+              - password
+              - status
+              type: object
+              properties:
+                admin_role_id:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                full_name:
+                  type: string
+                  description: required
+                  example: Richel
+                email:
+                  type: string
+                  description: required
+                  example: richelyosua@gmail.com
+                password:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 123123
+                status:
+                  type: string
+                  description: required
+                  example: active
+        required: false
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 30
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Mon, 07 Dec 2020 11:30:17 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/200OK3'
+              example:
+                response: 200
+                result: OK
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMaintenanceById'
+              example:
+                code: AD001
+                message: ADMIN_NOT_FOUND
+      deprecated: false
+  /admin/1:
+    delete:
+      tags:
+      - Admin
+      summary: Delete Admin
+      operationId: DeleteAdmin
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 30
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Wed, 05 Feb 2020 14:33:18 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/DeleteMaintenance'
+              example:
+                response: 200
+                result: OK
+      deprecated: false
+  /setting/1:
+    get:
+      tags:
+      - Setting
+      summary: Get Setting By Id
+      operationId: GetSettingById
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 181
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"b5-vo5dZMttU/IkuGQnUGmkA6IhyFU"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Wed, 05 Feb 2020 14:07:13 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/GetMaintenanceById1'
+              example:
+                response: 200
+                result:
+                  maintenance_id: 1
+                  sandbox: false
+                  production: false
+                  deleted_at: 
+                  created_at: 2020-02-05T14:03:11.138Z
+                  updated_at: 2020-02-05T14:03:11.138Z
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMaintenanceById'
+              example:
+                code: MT001
+                message: MAINTENANCE_NOT_FOUND
+      deprecated: false
+    put:
+      tags:
+      - Setting
+      summary: Update Setting
+      operationId: UpdateSetting
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/x-www-form-urlencoded
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+              - about
+              - privacy_policy
+              - terms_and_condition
+              - supplier_session_expiry
+              - dropshipper_session_expiry
+              - admin_session_expiry
+              - android_version_id
+              - android_version_update_message
+              - android_is_maintenance
+              - android_maintenance_message
+              - ios_version_id
+              - ios_version_update_message
+              - ios_is_maintenance
+              - ios_maintenance_message
+              type: object
+              properties:
+                about:
+                  type: string
+                  description: required
+                  example: test
+                privacy_policy:
+                  type: string
+                  description: required
+                  example: test
+                terms_and_condition:
+                  type: string
+                  description: required
+                  example: test
+                supplier_session_expiry:
+                  type: string
+                  description: required
+                  example: 3;h
+                dropshipper_session_expiry:
+                  type: string
+                  description: required
+                  example: 1;y
+                admin_session_expiry:
+                  type: string
+                  description: required
+                  example: 3;y
+                android_version_id:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                android_version_update_message:
+                  type: string
+                  description: required
+                  example: update now
+                android_is_maintenance:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                android_maintenance_message:
+                  type: string
+                  description: required
+                  example: under maintenance
+                ios_version_id:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                ios_version_update_message:
+                  type: string
+                  description: required
+                  example: update now
+                ios_is_maintenance:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                ios_maintenance_message:
+                  type: string
+                  description: required
+                  example: under maintenance
+        required: false
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 30
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Wed, 05 Feb 2020 14:32:18 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/UpdateMaintenance'
+              example:
+                response: 200
+                result: OK
+      deprecated: false
+    delete:
+      tags:
+      - Setting
+      summary: Delete Setting
+      operationId: DeleteSetting
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 30
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"1e-3g0dmN03jGlcsGO5+bGbDXy5Cdc"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Wed, 05 Feb 2020 14:33:18 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/DeleteMaintenance'
+              example:
+                response: 200
+                result: OK
+      deprecated: false
+  /setting:
+    get:
+      tags:
+      - Setting
+      summary: Show All Setting
+      operationId: ShowAllSetting
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: id
+      - name: order_by
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: setting_id
+      - name: order_type
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: desc
+      - name: pagination
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: boolean
+          example: false
+      - name: row
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+          example: 1
+      - name: page
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+          example: 1
+      responses:
+        200:
+          description: ''
+          headers:
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 202
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"ca-muKDyIpn5MZSTKDD/5xvSWid9xI"
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Accept-Encoding
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Wed, 05 Feb 2020 14:07:50 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/ShowAllMaintenance'
+              example:
+                response: 200
+                result:
+                  count: 1
+                  rows:
+                  - maintenance_id: 1
+                    sandbox: false
+                    production: false
+                    deleted_at: 
+                    created_at: 2020-02-05T14:03:11.138Z
+                    updated_at: 2020-02-05T14:03:11.138Z
+      deprecated: false
+    post:
+      tags:
+      - Setting
+      summary: Create New Setting
+      operationId: CreateNewSetting
+      parameters:
+      - name: lang
+        in: query
+        description: optional
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: en
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/x-www-form-urlencoded
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+              - about
+              - privacy_policy
+              - terms_and_condition
+              - supplier_session_expiry
+              - dropshipper_session_expiry
+              - admin_session_expiry
+              - android_version_id
+              - android_version_update_message
+              - android_is_maintenance
+              - android_maintenance_message
+              - ios_version_id
+              - ios_version_update_message
+              - ios_is_maintenance
+              - ios_maintenance_message
+              type: object
+              properties:
+                about:
+                  type: string
+                  description: required
+                  example: test
+                privacy_policy:
+                  type: string
+                  description: required
+                  example: test
+                terms_and_condition:
+                  type: string
+                  description: required
+                  example: test
+                supplier_session_expiry:
+                  type: string
+                  description: required
+                  example: 3;h
+                dropshipper_session_expiry:
+                  type: string
+                  description: required
+                  example: 1;y
+                admin_session_expiry:
+                  type: string
+                  description: required
+                  example: 3;y
+                android_version_id:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                android_version_update_message:
+                  type: string
+                  description: required
+                  example: update now
+                android_is_maintenance:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                android_maintenance_message:
+                  type: string
+                  description: required
+                  example: under maintenance
+                ios_version_id:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                ios_version_update_message:
+                  type: string
+                  description: required
+                  example: update now
+                ios_is_maintenance:
+                  type: integer
+                  description: required
+                  format: int32
+                  example: 1
+                ios_maintenance_message:
+                  type: string
+                  description: required
+                  example: under maintenance
+        required: false
+      responses:
+        200:
+          description: ''
+          headers:
+            Vary:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: X-HTTP-Method-Override, Accept-Encoding
+            X-DNS-Prefetch-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: off
+            X-Frame-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: SAMEORIGIN
+            Strict-Transport-Security:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: noopen
+            X-Content-Type-Options:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: nosniff
+            X-XSS-Protection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 1; mode=block
+            Content-Language:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: id
+            Access-Control-Allow-Origin:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: '*'
+            Content-Length:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 181
+            ETag:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: W/"b5-Pz2lIRdt4VDYq3nrPpVqTnr+kZA"
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Wed, 05 Feb 2020 14:03:11 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: keep-alive
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/CreateNewMaintenance'
+              example:
+                response: 200
+                result:
+                  maintenance_id: 1
+                  sandbox: false
+                  production: false
+                  updated_at: 2020-02-05T14:03:11.138Z
+                  created_at: 2020-02-05T14:03:11.138Z
+                  deleted_at: 
+        422:
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateNewMaintenance1'
+              example:
+                response: 422
+                result:
+                - SANDBOX_MUST_BE_BOOLEAN
+                - PRODUCTION_MUST_BE_BOOLEAN
+      deprecated: false
+components:
+  schemas:
+    200OK:
+      title: 200OK
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          $ref: '#/components/schemas/Result'
+      example:
+        response: 200
+        result:
+          deleted_at: 
+          created_at: 2020-12-07T05:24:11+00:00
+          updated_at: 2020-12-07T05:24:11+00:00
+          admin_id: 1
+          admin_role_id: 1
+          full_name: Richel
+          email: richel@gmail.com
+          password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+          profile_image_name: 
+          profile_image_source: 
+          status: active
+    Result:
+      title: Result
+      required:
+      - deleted_at
+      - created_at
+      - updated_at
+      - admin_id
+      - admin_role_id
+      - full_name
+      - email
+      - password
+      - profile_image_name
+      - profile_image_source
+      - status
+      type: object
+      properties:
+        deleted_at:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+        updated_at:
+          type: string
+        admin_id:
+          type: string
+        admin_role_id:
+          type: integer
+          format: int32
+        full_name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        profile_image_name:
+          type: string
+          nullable: true
+        profile_image_source:
+          type: string
+          nullable: true
+        status:
+          type: string
+      example:
+        deleted_at: 
+        created_at: 2020-12-07T05:24:11+00:00
+        updated_at: 2020-12-07T05:24:11+00:00
+        admin_id: 1
+        admin_role_id: 1
+        full_name: Richel
+        email: richel@gmail.com
+        password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+        profile_image_name: 
+        profile_image_source: 
+        status: active
+    200OK1:
+      title: 200OK1
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          $ref: '#/components/schemas/Result1'
+      example:
+        response: 200
+        result:
+          count: 2
+          rows:
+          - deleted_at: 
+            created_at: 2020-12-07T06:53:40+00:00
+            updated_at: 2020-12-07T06:53:40+00:00
+            admin_id: 2
+            admin_role_id: 1
+            full_name: Richel
+            email: richel@gmail.com
+            password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+            profile_image_name: 
+            profile_image_source: 
+            status: active
+          - deleted_at: 
+            created_at: 2020-12-07T05:24:11+00:00
+            updated_at: 2020-12-07T05:24:11+00:00
+            admin_id: 1
+            admin_role_id: 1
+            full_name: Richel
+            email: richel@gmail.com
+            password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+            profile_image_name: 
+            profile_image_source: 
+            status: active
+    Result1:
+      title: Result1
+      required:
+      - count
+      - rows
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int32
+        rows:
+          type: array
+          items:
+            $ref: '#/components/schemas/Row'
+          description: ''
+      example:
+        count: 2
+        rows:
+        - deleted_at: 
+          created_at: 2020-12-07T06:53:40+00:00
+          updated_at: 2020-12-07T06:53:40+00:00
+          admin_id: 2
+          admin_role_id: 1
+          full_name: Richel
+          email: richel@gmail.com
+          password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+          profile_image_name: 
+          profile_image_source: 
+          status: active
+        - deleted_at: 
+          created_at: 2020-12-07T05:24:11+00:00
+          updated_at: 2020-12-07T05:24:11+00:00
+          admin_id: 1
+          admin_role_id: 1
+          full_name: Richel
+          email: richel@gmail.com
+          password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+          profile_image_name: 
+          profile_image_source: 
+          status: active
+    Row:
+      title: Row
+      required:
+      - deleted_at
+      - created_at
+      - updated_at
+      - admin_id
+      - admin_role_id
+      - full_name
+      - email
+      - password
+      - profile_image_name
+      - profile_image_source
+      - status
+      type: object
+      properties:
+        deleted_at:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+        updated_at:
+          type: string
+        admin_id:
+          type: string
+        admin_role_id:
+          type: integer
+          format: int32
+        full_name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        profile_image_name:
+          type: string
+          nullable: true
+        profile_image_source:
+          type: string
+          nullable: true
+        status:
+          type: string
+      example:
+        deleted_at: 
+        created_at: 2020-12-07T06:53:40+00:00
+        updated_at: 2020-12-07T06:53:40+00:00
+        admin_id: 2
+        admin_role_id: 1
+        full_name: Richel
+        email: richel@gmail.com
+        password: 96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e
+        profile_image_name: 
+        profile_image_source: 
+        status: active
+    422UnprocessableEntity:
+      title: 422UnprocessableEntity
+      required:
+      - admin_role_id
+      - full_name
+      - email
+      - password
+      - status
+      type: object
+      properties:
+        admin_role_id:
+          type: array
+          items:
+            type: string
+          description: ''
+        full_name:
+          type: array
+          items:
+            type: string
+          description: ''
+        email:
+          type: array
+          items:
+            type: string
+          description: ''
+        password:
+          type: array
+          items:
+            type: string
+          description: ''
+        status:
+          type: array
+          items:
+            type: string
+          description: ''
+      example:
+        admin_role_id:
+        - Required
+        - Must Be Integer
+        full_name:
+        - Required
+        - Must Be String
+        email:
+        - Required
+        - Must Be Email
+        password:
+        - Required
+        - Must Be String
+        status:
+        - Required
+        - Must Be Enum
+    200OK3:
+      title: 200OK3
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          type: string
+      example:
+        response: 200
+        result: OK
+    DeleteMaintenance:
+      title: DeleteMaintenance
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          type: string
+      example:
+        response: 200
+        result: OK
+    GetMaintenanceById:
+      title: GetMaintenanceById
+      required:
+      - code
+      - message
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      example:
+        code: MT001
+        message: MAINTENANCE_NOT_FOUND
+    GetMaintenanceById1:
+      title: GetMaintenanceById1
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          $ref: '#/components/schemas/Result3'
+      example:
+        response: 200
+        result:
+          maintenance_id: 1
+          sandbox: false
+          production: false
+          deleted_at: 
+          created_at: 2020-02-05T14:03:11.138Z
+          updated_at: 2020-02-05T14:03:11.138Z
+    Result3:
+      title: Result3
+      required:
+      - maintenance_id
+      - sandbox
+      - production
+      - deleted_at
+      - created_at
+      - updated_at
+      type: object
+      properties:
+        maintenance_id:
+          type: string
+        sandbox:
+          type: boolean
+        production:
+          type: boolean
+        deleted_at:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      example:
+        maintenance_id: 1
+        sandbox: false
+        production: false
+        deleted_at: 
+        created_at: 2020-02-05T14:03:11.138Z
+        updated_at: 2020-02-05T14:03:11.138Z
+    ShowAllMaintenance:
+      title: ShowAllMaintenance
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          $ref: '#/components/schemas/Result4'
+      example:
+        response: 200
+        result:
+          count: 1
+          rows:
+          - maintenance_id: 1
+            sandbox: false
+            production: false
+            deleted_at: 
+            created_at: 2020-02-05T14:03:11.138Z
+            updated_at: 2020-02-05T14:03:11.138Z
+    Result4:
+      title: Result4
+      required:
+      - count
+      - rows
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int32
+        rows:
+          type: array
+          items:
+            $ref: '#/components/schemas/Row1'
+          description: ''
+      example:
+        count: 1
+        rows:
+        - maintenance_id: 1
+          sandbox: false
+          production: false
+          deleted_at: 
+          created_at: 2020-02-05T14:03:11.138Z
+          updated_at: 2020-02-05T14:03:11.138Z
+    Row1:
+      title: Row1
+      required:
+      - maintenance_id
+      - sandbox
+      - production
+      - deleted_at
+      - created_at
+      - updated_at
+      type: object
+      properties:
+        maintenance_id:
+          type: string
+        sandbox:
+          type: boolean
+        production:
+          type: boolean
+        deleted_at:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      example:
+        maintenance_id: 1
+        sandbox: false
+        production: false
+        deleted_at: 
+        created_at: 2020-02-05T14:03:11.138Z
+        updated_at: 2020-02-05T14:03:11.138Z
+    CreateNewMaintenance:
+      title: CreateNewMaintenance
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          $ref: '#/components/schemas/Result3'
+      example:
+        response: 200
+        result:
+          maintenance_id: 1
+          sandbox: false
+          production: false
+          updated_at: 2020-02-05T14:03:11.138Z
+          created_at: 2020-02-05T14:03:11.138Z
+          deleted_at: 
+    CreateNewMaintenance1:
+      title: CreateNewMaintenance1
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          type: array
+          items:
+            type: string
+          description: ''
+      example:
+        response: 422
+        result:
+        - SANDBOX_MUST_BE_BOOLEAN
+        - PRODUCTION_MUST_BE_BOOLEAN
+    UpdateMaintenance:
+      title: UpdateMaintenance
+      required:
+      - response
+      - result
+      type: object
+      properties:
+        response:
+          type: integer
+          format: int32
+        result:
+          type: string
+      example:
+        response: 200
+        result: OK
+  securitySchemes:
+    httpBearer:
+      type: http
+      scheme: bearer
+security:
+- httpBearer: []
+tags:
+- name: Admin
+- name: Setting

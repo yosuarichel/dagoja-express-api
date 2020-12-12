@@ -1,0 +1,63 @@
+{
+  "error": {
+    "NOT_FOUND": "{{variable, uppercase}} not found"
+  },
+  "variable": {
+    "user": "user"
+  },
+  "PAGE_NOT_FOUND": "Page Not Found",
+  "SYSTEM_MAINTENANCE": "System Maintenance",
+  "SOMETHING_WRONG": "Upss Something Wrong Happen",
+
+  "REQUIRED": "Required",
+  "MUST_BE_STRING": "Must Be String",
+  "MUST_BE_INTEGER": "Must Be Integer",
+  "MUST_BE_BOOLEAN": "Must Be Boolean",
+  "MUST_BE_EMAIL": "Must Be Email",
+  "MUST_BE_ENUM": "Must Be Enum",
+  "ALREADY_IN_USE": "Already In Use",
+  "ALREADY_EXIST": "Already exist",
+
+  "FILE_MUST_BE_IMAGE": "File must be image",
+  "FILE_EXT_NOT_ALLOWED": "File extension not allowed",
+  "FILE_MUST_BE_VIDEO": "File must be video",
+  "FILE_SIZE_IS_TOO_LARGE": "File size is too large",
+  "FAILED_TO_CREATE_THUMBNAIL": "Failed create thumbnail",
+
+  "FAILED_UPLOAD_FILE_TO_CDN": "Failed when uploading file to cdn",
+  "FAILED_REMOVE_FILE_FROM_CDN": "Failed remove file from cdn",
+  
+  "ADMIN_NOT_FOUND": "Admin not found",
+  "ADMIN_ALREADY_REGISTERED": "Admin already registered",
+
+  "ADMIN_ROLE_NOT_FOUND": "Admin role not found",
+  "ADMIN_ROLE_ALREADY_EXIST": "Admin role already exist",
+
+  "SETTING_NOT_FOUND": "Setting not found",
+
+  "NOT_AUTHORIZED": "Not authorized",
+  "ACCOUNT_NOT_FOUND": "Account not found",
+  "SESSION_REQUIRED": "Session required",
+  "ACCOUNT_SUSPENDED": "Account suspended",
+  "INVALID_CREDENTIAL": "Invalid credential",
+  "SESSION_EXPIRED": "Session expired",
+
+  "LOGIN_METHOD_NOT_FOUND": "Login method not found",
+  "LOGIN_METHOD_ALREADY_EXIST": "Login method already exist",
+
+  "APP_VERSION_NOT_FOUND": "App Version not found",
+  "APP_VERSION_ALREADY_EXIST": "App Version already exist",
+  "PLEASE_INPUT_HIGHER_VERSION": "Please input higher version",
+
+  "BRAND_NOT_FOUND": "Brand not found",
+  "BRAND_ALREADY_EXIST": "Brand already exist",
+
+  "CATEGORY_NOT_FOUND": "Category not found",
+  "CATEGORY_ALREADY_EXIST": "Category already exist",
+
+  "PRODUCT_NOT_FOUND": "Product not found",
+  "PRODUCT_ALREADY_EXIST": "Product already exist",
+
+  "PRODUCT_GALERY_NOT_FOUND": "Product galery not found",
+  "PRODUCT_GALERY_ALREADY_EXIST": "Product galery already exist"
+}
